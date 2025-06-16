@@ -1,0 +1,1 @@
+const HellowVueApp={data:()=>({massege:"ПРивет мир"})};Vue.createApp(HellowVueApp).mount("#app");
