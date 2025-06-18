@@ -206,6 +206,8 @@ body.lock {
 
 .button__button--red {
   color: #fffcfc;
+  box-shadow: 0 3px 0 0 #9e2f36, inset 4px 4px 8px 0 rgba(255, 255, 255, 0.25),
+    inset -4px -4px 10px 0 rgba(255, 255, 255, 0.15);
 }
 
 .button__button--red::before {
@@ -5171,7 +5173,7 @@ h2 small,
   border-radius: 50%;
   color: var(--red);
 
-  transition: color .2s ease, background-color .2s ease, opacity .2s ease;
+  transition: color 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
 }
 .slider-btn:hover {
   background-color: var(--dark-blue);
@@ -5199,7 +5201,7 @@ h2 small,
   margin: 0 !important;
   opacity: 1;
   background-color: white;
-  transition: background-color .2s ease;
+  transition: background-color 0.2s ease;
 }
 .slider-pagination .swiper-pagination-bullet-active {
   background-color: var(--dark-blue);
@@ -5227,4 +5229,58 @@ h2 small,
   .s-res__rec-slider {
     margin-top: 40px;
   }
+}
+
+.header__dropdown {
+  position: relative;
+  cursor: pointer;
+}
+.header__dropdown:hover .header__dropdown-body {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+.header__dropdown-body {
+  position: absolute;
+  z-index: 1110;
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  width: 240px;
+  text-align: center;
+  box-shadow: 4px 4px 11px 0 rgba(37, 56, 85, 0.1),
+    -4px -3px 11px 0 rgba(37, 56, 85, 0.1);
+  margin-top: 10px;
+  left: calc(50% - 125px);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+
+  transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+}
+.header__dropdown-btn {
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+  min-height: 40px;
+  font-size: 15px;
+  line-height: 110%;
+}
+.header__dropdown-item:not(:last-child) {
+  margin-bottom: 15px;
+}
+.header__dropdown-content {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 125%;
+}
+.header__dropdown-link {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 125%;
+  transition: color 0.2s ease;
+}
+.header__dropdown-link:hover {
+  color: var(--red);
 }
