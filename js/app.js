@@ -22116,7 +22116,6 @@
 
     function tabs() {
       const buttons = document.querySelectorAll("[data-tab-btn]");
-      console.log(buttons);
 
       if (buttons.length) {
         buttons.forEach((btn) => {
