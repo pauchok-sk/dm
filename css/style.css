@@ -5284,3 +5284,85 @@ h2 small,
 .header__dropdown-link:hover {
   color: var(--red);
 }
+
+.s-marketing {
+}
+.page-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 70px 0px 50px 0px;
+}
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+a.breadcrumbs__btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #788597;
+  transition: color 0.2s ease;
+}
+a.breadcrumbs__btn::after {
+  content: "/";
+}
+a.breadcrumbs__btn:hover {
+  color: var(--dark-blue);
+}
+.breadcrumbs__btn {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 125%;
+}
+.page-head__form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 1 470px;
+  background-color: white;
+  padding: 10px 30px;
+  border-radius: 40px;
+}
+.page-head__form-btn {
+  width: 24px;
+  height: 24px;
+  color: #c1cad6;
+  transition: color 0.2s ease;
+}
+.page-head__form-btn svg {
+  width: 100%;
+  height: 100%;
+}
+.page-head__form-btn:hover {
+  color: var(--dark-blue);
+}
+.page-head__form-input {
+  font-size: 14px;
+  line-height: 125%;
+}
+.page-head__form-input::placeholder {
+  color: #c1cad6;
+}
+
+@media (max-width: 991px) {
+  .s-marketing {
+    margin-top: 110px;
+  }
+  .page-head__form {
+    flex-basis: 350px;
+  }
+}
+@media (max-width: 575px) {
+  .s-marketing {
+    margin-top: 100px;
+  }
+  .page-head__form {
+    flex: none;
+    width: 100%;
+  }
+}
