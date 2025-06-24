@@ -4143,6 +4143,7 @@ h2 small,
 }
 .s-dev__wrapper {
   display: flex;
+  align-items: start;
   gap: 50px;
 }
 .s-dev__grid {
