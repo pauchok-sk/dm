@@ -22205,6 +22205,22 @@
           },
         });
       }
+
+      const recBlogSlider = document.querySelector(".s-blog-rec__slider");
+
+      if (recBlogSlider && window.matchMedia("(min-width: 576px)").matches) {
+        const swiper = new Swiper(recBlogSlider, {
+          speed: 800,
+          spaceBetween: 20,
+          slidesPerView: "auto",
+          breakpoints: {
+            992: {
+              spaceBetween: 30,
+              slidesPerView: 3,
+            },
+          },
+        });
+      }
     }
     sliders();
   })();
