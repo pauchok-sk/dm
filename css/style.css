@@ -6602,7 +6602,8 @@ a.s-blog__pagination-item:hover {
   border-radius: 20px;
   overflow: hidden;
   padding: 14px 24px;
-  box-shadow: 4px 4px 11px 0 rgba(38, 57, 86, 0.05), -4px -4px 11px 0 rgba(38, 57, 86, 0.05);
+  box-shadow: 4px 4px 11px 0 rgba(38, 57, 86, 0.05),
+    -4px -4px 11px 0 rgba(38, 57, 86, 0.05);
 }
 .s-single__subscribe::before {
   position: absolute;
@@ -6634,7 +6635,8 @@ a.s-blog__pagination-item:hover {
   .s-single__lit {
     margin: 40px 0px;
   }
-  .s-single__zoom, .s-single__subscribe {
+  .s-single__zoom,
+  .s-single__subscribe {
     width: 240px;
   }
   .s-single__subscribe {
@@ -6761,13 +6763,87 @@ a.s-blog__pagination-item:hover {
   border-radius: 50%;
   flex-shrink: 0;
 }
+.list-circle {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.list-circle li {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+}
+.list-circle li div {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.s-single__material {
+  margin: 50px 0px;
+  display: block;
+  padding: 30px;
+  background: #e5f1ff;
+  border-radius: 20px;
+}
+.s-single__material-body {
+  padding-left: 15px;
+  border-left: 2px solid var(--dark-blue);
+
+  font-size: 17px;
+  line-height: 127%;
+  margin-bottom: 10px;
+}
+.s-single__material-title {
+  font-weight: 600;
+}
+.s-single__material-content {
+  text-decoration: underline;
+}
+.s-single__material-content:hover {
+  color: var(--red);
+}
+.list-simple {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.list-simple li {
+  display: flex;
+  gap: 10px;
+  padding-left: 10px;
+}
+.list-simple li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: currentColor;
+  margin-top: 5px;
+}
 @media (max-width: 991px) {
-  .list-check {
+  .list-check,
+  .list-circle {
     gap: 20px;
+  }
+  .s-single__material {
+    margin: 40px 0px;
+  }
+  .list-simple {
+    gap: 15px;
   }
 }
 @media (max-width: 575px) {
-  .list-check {
+  .list-check,
+  .list-circle {
     gap: 15px;
+  }
+  .list-simple {
+    gap: 10px;
   }
 }
