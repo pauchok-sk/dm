@@ -980,6 +980,7 @@ h2 small,
 }
 
 .menu {
+  line-height: 125%;
   position: absolute;
   border-radius: 40px;
   padding: 20px 110px;
