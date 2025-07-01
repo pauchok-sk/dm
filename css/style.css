@@ -6508,12 +6508,10 @@ a.s-blog__pagination-item:hover {
 }
 .content {
   font-size: 17px;
+  line-height: 125%;
 }
 .content strong {
   font-weight: 600;
-}
-.content p {
-  line-height: 125%;
 }
 .content p:not(:last-child) {
   margin-bottom: 30px;
