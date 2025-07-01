@@ -6248,6 +6248,7 @@ a.s-blog__pagination-item:hover {
 }
 .s-single__menu-list a {
   font-size: 17px;
+  line-height: 125%;
   transition: color 0.2s ease;
 }
 .s-single__menu-list a:hover {
