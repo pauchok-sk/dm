@@ -1003,6 +1003,7 @@ h2 small,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  align-items: center;
   -webkit-column-gap: 19px;
   -moz-column-gap: 19px;
   column-gap: 19px;
@@ -1065,7 +1066,9 @@ h2 small,
   align-items: center;
   font-size: 14px;
   color: var(--dark-blue);
-  margin-bottom: 15px;
+}
+.menu__link + .spollers__body {
+  margin: 0;
 }
 
 .menu__link .text {
@@ -1073,8 +1076,14 @@ h2 small,
   max-width: 175px;
 }
 @media (max-width: 1199px) {
+  .menu__link {
+    padding-bottom: 15px;
+  }
   .menu__link .text {
     max-width: none;
+  }
+  .menu__list {
+    align-items:normal;
   }
 }
 
