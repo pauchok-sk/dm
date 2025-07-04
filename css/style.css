@@ -5970,6 +5970,7 @@ a.breadcrumbs__btn:hover {
   position: relative;
   padding-bottom: 62%;
   width: 100%;
+  display: block;
   z-index: 1;
 }
 .card-blog__gallery::before {
