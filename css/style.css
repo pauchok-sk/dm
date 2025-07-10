@@ -300,7 +300,7 @@ body.lock {
   -webkit-column-gap: 10px;
   -moz-column-gap: 10px;
   column-gap: 10px;
-  transition: opacity .2s ease;
+  transition: opacity 0.2s ease;
 }
 .input-file:hover {
   opacity: 0.7;
@@ -7618,7 +7618,8 @@ textarea.leave-comment__form-input {
   margin-bottom: 20px;
 }
 
-.s-task__form-wrapper .form-record__text, .s-task__form-wrapper .input-file-text {
+.s-task__form-wrapper .form-record__text,
+.s-task__form-wrapper .input-file-text {
   color: white;
 }
 
@@ -7673,5 +7674,115 @@ textarea.leave-comment__form-input {
   .s-task__item-num {
     font-size: 30px;
     line-height: 21px;
+  }
+}
+
+.s-automation {
+}
+.s-automation__head {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  gap: 20px;
+}
+.s-automation__title {
+  max-width: 610px;
+}
+.s-automation__content {
+  font-size: 15px;
+  line-height: 125%;
+  max-width: 460px;
+}
+.s-automation__wrapper {
+  display: flex;
+  gap: 30px;
+}
+.s-automation__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 400px;
+  flex-shrink: 0;
+}
+.s-automation__nav-tab {
+}
+
+.s-automation__nav-btn {
+  position: relative;
+  cursor: pointer;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 140%;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #c1cad6;
+  transition: border-color 0.2s ease;
+}
+.s-automation__nav-btn:hover {
+  border-color: #8ca1bd;
+}
+.s-automation__nav-btn::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 100%;
+  bottom: -2px;
+  height: 2px;
+  background-color: #2c4261;
+  transition: right 3s linear;
+}
+
+.s-automation__tabs {
+  flex: 1;
+}
+.s-automation__block {
+  display: flex;
+  gap: 30px;
+  border-radius: 20px;
+  background-color: white;
+  width: 100%;
+  padding: 30px 20px 30px 30px;
+}
+.s-automation__block-col {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.s-automation__block-item {
+}
+.s-automation__block-title {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 125%;
+  margin-bottom: 20px;
+  color: #2C4261;
+}
+.s-automation__block-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 250px;
+  flex-shrink: 0;
+}
+.s-automation__block-list {
+  gap: 10px;
+}
+.s-automation__gallery-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+@media (max-width: 991px) {
+  .s-automation__head {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .s-automation__title {
+    max-width: 500px;
   }
 }
