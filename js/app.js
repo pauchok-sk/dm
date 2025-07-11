@@ -22223,5 +22223,91 @@
       }
     }
     sliders();
+
+    function autoTabs() {
+      const buttons = document.querySelectorAll("[data-auto-tab-btn]");
+
+      if (buttons.length) {
+        const tabs = document.querySelectorAll("[data-auto-tab]");
+
+        let index = 0;
+
+        function changeTab() {
+          const currentActiveBtn = Array.from(buttons).find(b => b.classList.contains("_active"));
+          if (currentActiveBtn) {
+            currentActiveBtn.classList.add("_prev-btn-auto-tab")
+          }
+
+          const prevTab = tabs[index - 1];
+          const currentTab = tabs[index];
+
+          // const prevBtn = buttons[index - 1];
+          const prevBtn = Array.from(buttons).find((b) =>
+            b.classList.contains("_prev-btn-auto-tab")
+          );
+          const currentBtn = buttons[index];
+
+          if (prevTab) {
+            prevTab.style.opacity = 0;
+          }
+          if (prevBtn) {
+            prevBtn.classList.add("_regress");
+            setTimeout(() => {
+              prevBtn.classList.remove("_regress");
+              prevBtn.classList.remove("_prev-btn-auto-tab");
+            }, 200);
+          }
+
+          // удаляем активные классы у прошлых элементов
+          tabs.forEach((t) => t.classList.remove("_active"));
+          buttons.forEach((b) => b.classList.remove("_active"));
+
+          currentTab.classList.add("_active");
+          currentTab.style.opacity = 0;
+          currentBtn.classList.add("_active");
+
+          setTimeout(() => {
+            currentTab.style.opacity = 1;
+
+            if (index >= tabs.length - 1) {
+              index = 0;
+            } else {
+              index = index + 1;
+            }
+          }, 200);
+        }
+
+        changeTab();
+
+        let interval = setInterval(() => {
+          changeTab();
+        }, 3000);
+
+        buttons.forEach((btn, i) => {
+          btn.addEventListener("click", () => {
+            const currentId = btn.dataset.autoTabBtn;
+            const currentTab = document.querySelector(
+              `[data-auto-tab="${currentId}"]`
+            );
+            // const currentActiveBtn = document.querySelector(
+            //   "[data-auto-tab-btn]._active"
+            // );
+
+            // currentActiveBtn.classList.add("_prev-btn-auto-tab");
+
+            clearInterval(interval);
+
+            index = i;
+            changeTab();
+
+            interval = setInterval(() => {
+              changeTab();
+            }, 3000);
+          });
+        });
+      }
+    }
+
+    autoTabs();
   })();
 })();
