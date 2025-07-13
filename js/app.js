@@ -22221,6 +22221,26 @@
           },
         });
       }
+
+      const lettersSlider = document.querySelector(".s-letters__slider");
+
+      if (lettersSlider) {
+        const swiper = new Swiper(lettersSlider, {
+          speed: 800,
+          spaceBetween: 30,
+          navigation: {
+            prevEl: ".s-letters .slider-btn._prev",
+            nextEl: ".s-letters .slider-btn._next",
+          },
+          autoplay: {
+            delay: 3000,
+          },
+          pagination: {
+            el: ".s-letters .slider-pagination",
+            clickable: true,
+          },
+        });
+      }
     }
     sliders();
 
@@ -22233,9 +22253,11 @@
         let index = 0;
 
         function changeTab() {
-          const currentActiveBtn = Array.from(buttons).find(b => b.classList.contains("_active"));
+          const currentActiveBtn = Array.from(buttons).find((b) =>
+            b.classList.contains("_active")
+          );
           if (currentActiveBtn) {
-            currentActiveBtn.classList.add("_prev-btn-auto-tab")
+            currentActiveBtn.classList.add("_prev-btn-auto-tab");
           }
 
           const prevTab = tabs[index - 1];
