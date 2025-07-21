@@ -22303,7 +22303,7 @@
 
         let interval = setInterval(() => {
           changeTab();
-        }, 3000);
+        }, 5000);
 
         buttons.forEach((btn, i) => {
           btn.addEventListener("click", () => {
@@ -22311,11 +22311,6 @@
             const currentTab = document.querySelector(
               `[data-auto-tab="${currentId}"]`
             );
-            // const currentActiveBtn = document.querySelector(
-            //   "[data-auto-tab-btn]._active"
-            // );
-
-            // currentActiveBtn.classList.add("_prev-btn-auto-tab");
 
             clearInterval(interval);
 
@@ -22324,7 +22319,7 @@
 
             interval = setInterval(() => {
               changeTab();
-            }, 3000);
+            }, 5000);
           });
         });
       }
