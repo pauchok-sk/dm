@@ -2077,9 +2077,16 @@ h2 small,
 .client-stream__title {
   margin: 0px 0px 60px 0px;
 }
+.client-stream__title .decor::after {
+  bottom: 0;
+}
+.automation__title .decor::after {
+  bottom: 0;
+}
 
 @media (max-width: 767px) {
-  .client-stream, .team-deliver {
+  .client-stream,
+  .team-deliver {
     overflow: hidden;
   }
 }
@@ -8360,4 +8367,10 @@ textarea.leave-comment__form-input {
 .additional-block-br {
   margin-top: auto;
   margin-left: auto;
+}
+.qurs-expertise-ite-3__title .decor::after {
+  bottom: 0;
+}
+.blog__title .decor::after {
+  width: 145%;
 }
