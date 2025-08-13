@@ -22333,6 +22333,8 @@
         behavior: "smooth",
       });
     }
-    scrollTop()
+    scrollTop();
+
+    Fancybox.bind("[data-fancybox]");
   })();
 })();

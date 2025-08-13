@@ -7465,7 +7465,6 @@ textarea.leave-comment__form-input {
   font-weight: 700;
   font-size: 17px;
   line-height: 125%;
-  text-transform: uppercase;
   margin-bottom: 20px;
 }
 .s-spectrum__item-list {
@@ -7478,6 +7477,7 @@ textarea.leave-comment__form-input {
   display: flex;
   gap: 8px;
   padding-left: 10px;
+  line-height: 125%;
 }
 .s-spectrum__item-list li::before {
   content: "";
@@ -7725,26 +7725,25 @@ textarea.leave-comment__form-input {
   max-width: 460px;
 }
 .s-automation__wrapper {
-  display: flex;
-  gap: 30px;
 }
 .s-automation__nav {
   display: flex;
-  flex-direction: column;
-  gap: 25px;
-  width: 400px;
+  gap: 20px;
   flex-shrink: 0;
+  margin-bottom: 25px;
 }
 .s-automation__nav-tab {
+  flex: 1;
 }
 
 .s-automation__nav-btn {
   position: relative;
   cursor: pointer;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 140%;
-  padding-bottom: 20px;
+  height: 100%;
+  padding-bottom: 10px;
   border-bottom: 2px solid #c1cad6;
   transition: border-color 0.2s ease;
 }
@@ -7839,6 +7838,11 @@ textarea.leave-comment__form-input {
     margin-bottom: 40px;
   }
   .s-automation__nav {
+    width: 100%;
+    flex-direction: column;
+  }
+  .s-automation__nav-btn {
+    flex: none;
     width: 100%;
   }
   .s-automation__block {
@@ -8028,6 +8032,10 @@ textarea.leave-comment__form-input {
 .s-letters__img {
   display: block;
   width: 155px;
+  transition: opacity .3s ease;
+}
+.s-letters__img:hover {
+  opacity: 0.7;
 }
 .s-letters__slide-body {
   flex: 1;
@@ -8075,6 +8083,12 @@ textarea.leave-comment__form-input {
   line-height: 140%;
   max-width: 230px;
   margin-bottom: 50px;
+}
+.s-letters__statistic-title .decor::after {
+  width: 60%;
+  right: 0;
+  left: auto;
+  bottom: -3px;
 }
 .s-letters__statistic-title small {
   font-weight: 300;
@@ -8382,4 +8396,25 @@ textarea.leave-comment__form-input {
 } 
 .form-record__title .decor::after {
   bottom: 0;
+}
+
+.s-feature .list li {
+  line-height: 125%;
+}
+
+.s-spectrum .s-title .decor::after {
+  bottom: 0;
+}
+
+.s-task__title .decor::after, .s-process .decor::after {
+  bottom: -3px;
+}
+
+@media (min-width: 992px) {
+  .s-reasons__person {
+    margin-top: -70px;
+  }
+  .s-reasons__item:nth-child(6), .s-reasons__item:nth-child(7) {
+    margin-top: -50px;
+  }
 }
