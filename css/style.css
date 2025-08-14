@@ -803,6 +803,7 @@ h2 small,
   height: 100%;
   min-height: 90px;
   border-radius: 40px;
+  font-size: 14px;
   background: var(--white);
   padding: 20px 30px;
 }
@@ -1328,6 +1329,7 @@ h2 small,
 .footer-bottom__item .link {
   display: block;
   font-weight: 700;
+  font-size: 12px;
 }
 
 .catalog-filter {
@@ -2143,6 +2145,7 @@ h2 small,
   font-weight: 700;
   font-size: 18px;
   line-height: 125%;
+  text-transform: none;
   color: var(--dark-blue);
   margin: 0px 0px 20px 0px;
 }
@@ -2360,7 +2363,6 @@ h2 small,
   font-weight: 700;
   font-size: 16px;
   line-height: 127%;
-  text-transform: uppercase;
   color: var(--dark-blue);
   margin: 0px 0px 16px 0px;
   min-height: 40px;
@@ -5426,6 +5428,7 @@ a.breadcrumbs__btn:hover {
 }
 
 .s-title {
+  font-weight: 700;
   color: var(--dark-blue);
   margin-bottom: 65px;
 }
@@ -7728,7 +7731,7 @@ textarea.leave-comment__form-input {
 }
 .s-automation__nav {
   display: flex;
-  gap: 20px;
+  row-gap: 20px;
   flex-shrink: 0;
   margin-bottom: 25px;
 }
@@ -7739,13 +7742,18 @@ textarea.leave-comment__form-input {
 .s-automation__nav-btn {
   position: relative;
   cursor: pointer;
-  font-weight: 300;
+  font-weight: 600;
   font-size: 14px;
   line-height: 140%;
   height: 100%;
   padding-bottom: 10px;
   border-bottom: 2px solid #c1cad6;
   transition: border-color 0.2s ease;
+}
+@media (min-width: 992px) {
+  .s-automation__nav-tab:not(:last-child) .s-automation__nav-btn {
+    padding-right: 20px;
+  }
 }
 .s-automation__nav-btn._active::after {
   right: 0;
