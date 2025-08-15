@@ -2588,9 +2588,6 @@ h2 small,
   display: grid;
   gap: 13px;
   grid-template-columns: repeat(auto-fit, minmax(133px, 133px));
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
 }
 
 .qurs-expertise-ite-3__contetnt {
