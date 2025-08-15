@@ -2584,7 +2584,6 @@ h2 small,
 }
 
 .qurs-expertise-ite-3__box {
-  display: -ms-grid;
   display: grid;
   gap: 13px;
   grid-template-columns: repeat(auto-fit, minmax(133px, 133px));
