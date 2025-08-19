@@ -1827,7 +1827,6 @@ h2 small,
 
 .selling__title {
   margin: 0px 0px 60px 0px;
-  padding-top: 30px;
 }
 
 .selling__title .decor {
@@ -1868,7 +1867,7 @@ h2 small,
   -webkit-column-gap: 60px;
   -moz-column-gap: 60px;
   column-gap: 60px;
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 40px 0px;
 }
 
 .selling__box-grid-2 {
@@ -2073,10 +2072,6 @@ h2 small,
   justify-content: space-between;
 }
 
-.client-stream__block-2 .buuton-block {
-  margin-top: -21px;
-}
-
 .client-stream__title {
   margin: 0px 0px 60px 0px;
 }
@@ -2235,10 +2230,32 @@ h2 small,
 .automation__block-3 {
   display: -webkit-box;
   display: -ms-flexbox;
+  padding: 25px 70px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.3);
   display: flex;
+  flex-wrap: wrap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
+  gap: 30px;
   justify-content: space-between;
+}
+.client-stream__block-2 {
+  padding: 25px 70px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.3);
+}
+@media (max-width: 1199px) {
+  .automation__block-3,
+  .client-stream__block-2 {
+    padding: 35px 30px;
+  }
+}
+@media (max-width: 575px) {
+  .automation__block-3,
+  .client-stream__block-2 {
+    padding: 25px 15px;
+  }
 }
 
 .сomplex-implementation__title {
@@ -3484,7 +3501,7 @@ h2 small,
   }
 
   .selling__title {
-    margin: 0px 0px 50px 0px;
+    margin: 0px 0px 30px 0px;
   }
 
   .selling__title {
@@ -8571,9 +8588,9 @@ textarea.leave-comment__form-input {
 }
 .s-blog-m__social-content {
   font-weight: 700;
-font-size: 15px;
-line-height: 125%;
-max-width: 240px;
+  font-size: 15px;
+  line-height: 125%;
+  max-width: 240px;
 }
 
 .line {
