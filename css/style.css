@@ -167,7 +167,7 @@ body.lock {
   overflow: visible;
 }
 
-[class$="__container"] {
+[class$="__container"], .first-section__container {
   max-width: 1190px;
   margin: 0 auto;
   -webkit-box-sizing: content-box;
@@ -3172,7 +3172,7 @@ h2 small,
 }
 
 @media (max-width: 999px) {
-  [class$="__container"] {
+  [class$="__container"], .first-section__container {
     padding: 0px 10px;
   }
 
@@ -8638,4 +8638,11 @@ textarea.leave-comment__form-input {
     flex: none;
     width: 100%;
   }
+}
+.title-block._bold {
+  font-weight: 700;
+}
+
+.first-section__container._big {
+  max-width: 1325px;
 }
