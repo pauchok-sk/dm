@@ -22157,11 +22157,18 @@
         });
 
         function changeActive(index) {
-          items.forEach((item) => item.classList.remove("_active"));
+          items.forEach((item) => {
+            item.classList.remove("_active")
+            item.style.opacity = 0;
+          });
           buttons.forEach((btn) => btn.classList.remove("_active"));
 
           items[index].classList.add("_active");
           buttons[index].classList.add("_active");
+
+          setInterval(() => {
+            items[index].style.opacity = 1;
+          }, 10)
 
           currentActive = index;
         }
@@ -22213,6 +22220,10 @@
           speed: 800,
           spaceBetween: 20,
           slidesPerView: "auto",
+          navigation: {
+            prevEl: ".s-blog-rec__slider-btn._prev",
+            nextEl: ".s-blog-rec__slider-btn._next"
+          },
           breakpoints: {
             992: {
               spaceBetween: 30,
