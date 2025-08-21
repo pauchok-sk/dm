@@ -4860,6 +4860,8 @@ h2 small,
   flex-direction: column;
   gap: 15px;
   margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 125%;
 }
 .s-process__item-list li {
   display: flex;
@@ -7632,6 +7634,7 @@ textarea.leave-comment__form-input {
 }
 .s-task__wrapper {
   display: grid;
+  align-items: start;
   grid-template-columns: repeat(2, 1fr);
   gap: 25px;
 }
@@ -9244,42 +9247,85 @@ textarea.leave-comment__form-input {
 }
 
 .modal {
-  width: 600px;
+  width: 700px;
   max-width: calc(100vw - 20px);
   background: linear-gradient(233deg, #eff2f7 0%, #c8d8e8 100%);
   border-radius: 20px;
-  padding: 30px;
+  padding: 53px 35px;
   color: #2c4261;
   display: none;
 }
 .modal__title {
-  max-width: 790px;
-  font-size: 24px;
-  margin-bottom: 25px;
+  max-width: 760px;
+  font-size: 25px;
+  line-height: 127%;
+  margin-bottom: 35px;
+}
+.modal__title span {
+  font-weight: 400;
+}
+.modal__wrapper {
+  display: flex;
+  gap: 20px;
+}
+.modal__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 .modal__subtitle {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 10px;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 17px;
   line-height: 125%;
   margin-bottom: 50px;
 }
 .modal__subtitle::before {
   content: "";
-  width: 40px;
+  width: 23px;
   flex-shrink: 0;
   border: 1px dashed #253855;
 }
 .modal__list {
   margin-bottom: 20px;
+  font-size: 12px;
+}
+.modal__subcontent {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 127%;
+  margin-top: auto;
+  max-width: 255px;
 }
 .modal__form-wrapper {
-  flex: 0 1 490px;
+  flex: 0 1 330px;
+}
+.modal__form-wrapper .form-record__input {
+  padding: 16px 30px;
+  font-size: 12px;
+}
+.modal__form-wrapper .form-record__inpits {
+  gap: 5px;
+}
+.modal__form-wrapper .form-record__text {
+  font-size: 10px;
+}
+.modal__form-wrapper .form-record__footer {
+  flex-direction: column-reverse;
+  align-items: start;
 }
 .modal__form-wrapper .form-record {
   width: 100%;
+}
+
+.modal__form-wrapper .input-file-text {
+  font-size: 12px;
+}
+.modal__form-wrapper .form-record__button {
+  font-size: 12px;
+  width: 250px;
 }
 
 @media (max-width: 1199px) {
@@ -9299,12 +9345,18 @@ textarea.leave-comment__form-input {
   }
 }
 @media (max-width: 767px) {
-  .modal__body {
+  .modal__wrapper {
     flex-wrap: wrap;
+  }
+  .modal__title {
+    font-size: 20px;
   }
   .modal__content,
   .modal__form-wrapper {
     flex: none;
+    width: 100%;
+  }
+  .modal__form-wrapper .form-record__button {
     width: 100%;
   }
 }
