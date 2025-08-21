@@ -22346,5 +22346,6 @@
     }
 
     Fancybox.bind("[data-fancybox]");
+    // Fancybox.show([{src: "#modal-connect", type: "inline"}])
   })();
 })();
